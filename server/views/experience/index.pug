@@ -1,0 +1,27 @@
+extends ../layout/index
+
+block content
+    main.container.mt-5
+        h1.text-center.mb-5 #{page}
+        .row
+            .col-md-12
+                include ../layout/partials/experiences
+
+            .col-md-12
+                h2.text-center Tell us your experience
+                if(errors)
+                    each error in errors
+                        .alert.alert-danger.text-center=error.message
+                .row.justify-content-center
+                    .col-md-8
+                        form(action="/experience", method="POST")
+                            .form-group
+                                label(for="name") Name 
+                                input.form-control(id="name", type="text", placeholder="Your name", name="name", value=name)
+                            .form-group
+                                label(for="mail") Mail 
+                                input.form-control(id="mail", type="email", placeholder="Your mail", name="mail", value=mail)
+                            .form-group
+                                label(for="message") Description 
+                                textarea#message.form-control(name="message", cols="30", rows="3", placeholder="Tell us your experience")=message
+                            input.btn.btn-success.btn-block(type="submit", value="Send")

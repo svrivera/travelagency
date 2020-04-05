@@ -1,0 +1,32 @@
+extends ../layout/index
+
+block slider
+    .slider
+        h1 Rio de Janiero
+        em Adventure
+
+block content
+    main.container.mt-5
+        h2.text-center.mb-5 About us
+        .row.mb-5
+            .col-md-6
+                p In finibus sit amet lorem non faucibus. Maecenas ullamcorper at orci vitae consequat. Morbi sit amet nisi egestas, lacinia justo eget, sodales purus. Donec accumsan pretium dolor, quis iaculis velit rutrum eu. Integer non nibh vel est venenatis lacinia. 
+
+                p Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce congue pulvinar nisi in malesuada. Sed efficitur metus sit amet volutpat tempus. Pellentesque rhoncus tellus et ex dictum, vitae porta nisl lobortis. Maecenas vel auctor tellus.
+            .col-md-6
+                img.img-fluid(src="/img/home_aboutus.jpg")
+        h2.text-center.mb-5 Your next trip
+        include ../layout/partials/travel
+    .discount
+        .container
+            .row
+                .col-md-6
+                    .content
+                        h3 %5 Discount
+                        p.title Trip to Canada
+                        p March 20, 2021 - March 31, 2021 
+                        p.price 2,500 USD
+    
+    .container
+        h2.text-center.my-5
+            include ../layout/partials/experiences

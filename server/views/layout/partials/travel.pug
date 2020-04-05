@@ -1,0 +1,15 @@
+.row.next-trips
+    each trip in trips
+        .col-md-6.col-lg-4.mb-4
+            .card
+                img.img-fluid(src=`/img/destinos_${trip.image}.jpg`)
+                .card-body
+                    h2 #{trip.title}
+                    p
+                        i.fas.fa-calendar-alt
+                        | #{trip.date_gone} - #{trip.date_arrive}
+                    p
+                        i.fas.fa-dollar-sign
+                        | #{trip.price}
+                    p #{trip.description.substr(0, 100)}
+                        a(href=`travel/${trip.id}`, class="btn btn-success btn-block") More About

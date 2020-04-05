@@ -1,0 +1,12 @@
+header
+    .navegation
+        .container
+            .row.justify-content-center.justify-content-md-between.align-items-center.py-4
+                .col-6.col-md-4
+                    a(href="/")
+                        img(src="/img/logo.svg", alt="Logo Travel Agency")
+                .col-6.col-md-8
+                    nav.nav.justify-content-center.justify-content-md-end
+                        a.nav-link(href="/aboutus", class=(route==='/aboutus' ? 'active' : '')) About us
+                        a.nav-link(href="/travel", class=(route==='/travel' ? 'active' : '')) Travel
+                        a.nav-link(href="/experience", class=(route==='/experience' ? 'active' : '')) Our experience

@@ -1,0 +1,19 @@
+extends ../layout/index
+
+block content
+    main.container.mt-5
+        .row
+            .col-md-5
+                img.img-fluid(src=`/img/destinos_${trip.image}_ln.jpg`)
+            .col-md-7
+                h1 #{trip.title}
+                p
+                    i.fas.fa-calendar-alt
+                    |  Departure: #{trip.date_gone}  |  Arrival: #{trip.date_arrive}
+                p
+                    i.fas.fa-dollar-sign
+                    |  #{trip.price} USD
+                p
+                    i.fas.fa-users
+                    |  #{trip.available} Available
+                p #{trip.description}

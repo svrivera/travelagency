@@ -1,0 +1,11 @@
+blockquote.text-center Read about our custumers experiences
+.row.experiences
+    each experience in experiences
+        .col-md-6.col-lg-4.mb-4
+            .card
+                .card-body
+                    blockquote.blockquote
+                        p.mb-0
+                            | #{experience.message}
+                    footer.blockquote-footer
+                        | #{experience.name}
