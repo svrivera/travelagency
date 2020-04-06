@@ -10,8 +10,9 @@ exports.getExperiences = async (req, res) => {
 }
 
 exports.postExperience = async (req, res) => {
+    const experiences = await Experiences.findAll();
     let {name, mail, message} = req.body;
-    let errors = [];
+    const errors = [];
     if (!name) {
         errors.push({'message': 'Add your name'})
     };
@@ -28,7 +29,8 @@ exports.postExperience = async (req, res) => {
             errors,
             name,
             mail,
-            message
+            message,
+            experiences
         })
     }
     else {
