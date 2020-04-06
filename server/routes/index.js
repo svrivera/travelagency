@@ -10,7 +10,6 @@ const travelController = require('../controllers/travelController');
 const experiencesController = require('../controllers/experienceController');
 
 module.exports = () => {
-    console.log('EMPEZANDO GET');
     router.get('/', homeController.getHome);
     
     router.get('/aboutus', aboutusController.getAboutus);
